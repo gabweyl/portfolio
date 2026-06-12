@@ -1,25 +1,6 @@
 const card = document.querySelector('.card');
 const page = document.querySelector('.page');
 
-card.addEventListener('mouseenter', () => {
-  card.style.transform = 'scale(1.03) translateY(-6px)';
-});
-
-card.addEventListener('mouseleave', () => {
-  card.style.transform = '';
-  page.style.backgroundPosition = '0px 0px';
-});
-
-document.addEventListener('mousemove', (e) => {
-  const x = (e.clientX / window.innerWidth - 0.5) * -20;
-  const y = (e.clientY / window.innerHeight - 0.5) * -20;
-  page.style.backgroundPosition = `${x}px ${y}px`;
-});
-
-
-const card = document.querySelector('.card');
-const page = document.querySelector('.page');
-
 let floatY = 0;
 let floatDir = 1;
 let floatFrame;
@@ -40,6 +21,8 @@ card.addEventListener('mouseenter', () => {
 
 card.addEventListener('mouseleave', () => {
   page.style.backgroundPosition = '0px 0px';
+  floatY = 0;
+  floatDir = 1;
   floatCard();
 });
 
