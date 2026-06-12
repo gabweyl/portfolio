@@ -121,8 +121,7 @@ body {
 }
  
 .floating {
-  animation: cardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both,
-             float 4s ease-in-out infinite;
+  will-change: transform;
 }
  
 @keyframes float {
