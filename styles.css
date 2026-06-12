@@ -28,7 +28,7 @@ body {
   padding: 3rem 3rem 2.5rem;
   max-width: 680px;
   width: 100%;
-  animation: cardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
  
 .card:hover {
